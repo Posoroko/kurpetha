@@ -187,7 +187,10 @@ function move(e, f)   //e = nouvelle position - f = type de la nouvelle tuile
 
   case 'hole':                                                                //on se déplace vers 'hole'
               board[e] = 2;                                                   //nouvelle position
-              tuiles[e].classList.replace("hole", "perso");                   // nouvelle tuile
+              tuiles[e].classList.replace("holeUp", "perso");                   // nouvelle tuile
+              tuiles[e].classList.replace("holeDown", "perso");
+              tuiles[e].classList.replace("holeLeft", "perso");
+              tuiles[e].classList.replace("holeRight", "perso");
               if(!onFood && !onHole)                                          // on arrive de 'sky'
               {
               tuiles[position].classList.replace("perso", "sky");
